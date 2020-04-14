@@ -13,6 +13,7 @@ body{
 p, h1, h2, h3{
   margin-top: 0px;
   vertical-align: top;
+  line-height: 120%;
 }
 b{
   font-weight: 700;
@@ -20,6 +21,11 @@ b{
 h1{
   font-weight: 700;
   font-size: 3em;
+    text-height: 2;
+}
+h2{
+  font-weight: 700;
+  font-size: 1.3em;
 }
 /*----WELCOME SCREEN-----*/
 .welcome_screen{
@@ -46,10 +52,10 @@ h1{
 }
 .resume h1{
   letter-spacing: 0.07em;
-  margin-top: -0.25em;
+  margin-top: -0.23em;
 }
 .resume h2{
-  margin-top: -0.25em;
+  margin-top: -0.18em;
 }
 .resume div{
   white-space: nowrap;
@@ -60,6 +66,12 @@ h1{
 .aboutme{
   grid-area: aboutme;
   text-align: right;
+}
+.aboutme p{
+    line-height: 140%;
+}
+.aboutme h2{
+    line-height: 130%;
 }
 .resumephoto{
   grid-area: photo;
