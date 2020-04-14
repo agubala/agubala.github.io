@@ -1,2 +1,2 @@
 # agubala.github.io
-Portfolio Anastazji
+Anastasia Gubala - Portfolio
