@@ -34,7 +34,7 @@ h1{
 .resume{
   color: var(--yellow-color);
   display:grid;
-  grid-template-columns: minmax(410px,auto) 200px minmax(410px,auto);
+  grid-template-columns: minmax(400px,auto) 200px minmax(400px,auto);
   grid-template-rows: auto;
   grid-template-areas:
    "aboutme photo education"
