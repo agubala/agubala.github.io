@@ -1,14 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap');
 
 :root{
-  --green-color: #046466 ;
-  --yellow-color: #f5c86b ;
-  --pink-color: #efadb0
+  --color_green: #046466 ;
+  --color_text_yellow: #f5c86b ;
+  --color_yellow: #ffd957;
+  --color_pink: #efadb0;
+  --top_right_deco_radius: calc(30*(0.5vh+0.5vw)); /*for small_rect_size calculation*/
+  --small_rect_size: calc(var(--top_right_deco_radius)*0.2929); /*a=R(1-sqrt(2)/2)*/
 }
 body{
-  background-color: var(--green-color);
+  min-width: 1300px;
+  background-color: var(--color_green);
   font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-weight: 200;
+  margin: 0px;
 }
 p, h1, h2, h3{
   margin-top: 0px;
@@ -27,20 +32,127 @@ h2{
   font-weight: 700;
   font-size: 1.3em;
 }
-/*----WELCOME SCREEN-----*/
+/*-------------------------------WELCOME SCREEN-------------------*/
 .welcome_screen{
-  color: var(--pink-color);
-  height: 70vh;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  /*height: 0; padding-top: min(100vh,56.25%);/*56.25%;  16:9 Aspect Ratio */
+  max-padding-top
+  /*text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: clip;
+  text-overflow: clip;*/
   }
-  /*----RESUME-----*/
+.welcome_screen p,a{
+  margin: 0px;
+  padding: 0px;
+  font-weight: 600;
+  font-size: 2em;
+  text-decoration: none;
+  display: inline;
+  line-height: 100%;
+}
+.name_field{
+  background-color: var(--color_pink);
+  border-radius: calc(60*(0.5vh+0.5vw)) 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  /*------*text properties*----*/
+  color: var(--color_green);
+}
+.name_field p{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.top_right_deco{
+
+  background-color: var(--color_yellow);
+  border-radius: 0px var(--top_right_deco_radius);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 50%;
+}
+.small_rect{
+  background-color: var(--color_yellow);
+  width: var(--small_rect_size);
+  height: var(--small_rect_size);
+}
+.rect{
+  background-color: var(--color_yellow);
+  width: 2em;
+  height: 2em;
+}
+.name_field .small_rect
+{
+  position: absolute;
+  right: 0px;
+}
+.position_field{
+  color: var(--color_text_yellow);
+  position: absolute;
+  top: calc(60vh + 20px);
+  right: 0;
+  width:50%;
+  display: inline-block;
+}
+.position_field .rect{
+ display: inline-block;
+ margin-right: 5px;
+}
+.link_portfolio{
+  display: block;
+  width:450px;
+  height: 170px;
+  line-height: 170px;
+  text-align: center;
+  border: 5px solid var(--color_pink);
+  border-radius: 100px 0px;
+  display: block;
+  color: var(--color_pink);
+  transition: background-color 0.5s,box-shadow 1.5s;
+
+}
+.link_portfolio:hover {
+  color: var(--color_green);
+  background-color: var(--color_pink);
+  box-shadow: 10px 10px #003536;
+
+}
+.welcome_screen .link_portfolio{
+  position: absolute;
+  bottom: 75px;
+  left: 100px;
+}
+#rect_1{
+  position: absolute;
+  top: min(300px, 40%);
+  left: min(200px, 20%);
+}
+.decoration_middle{
+  background: var(--color_yellow);
+  width:135px;
+  height: 300px;
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  border-top-right-radius: 150px;
+}
+  /*----------------------RESUME-------------------------*/
+
 .resume{
-  color: var(--yellow-color);
+  margin: 70px;
+  color: var(--color_text_yellow);
   display:grid;
-  grid-template-columns: minmax(400px,1fr) 250px minmax(400px,1fr);
+  min-width: 1050px;
+  grid-template-columns: minmax(400px,4fr) 240px minmax(400px,4fr);
   grid-template-rows: auto;
   grid-template-areas:
    "aboutme photo education"
@@ -52,15 +164,14 @@ h2{
 }
 .resume h1{
   letter-spacing: 0.07em;
-  margin-top: -0.23em;
 }
 .resume h2{
-  margin-top: -0.18em;
+/*  margin-top: -0.18em;*/
 }
 .resume div{
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: clip;
+  overflow:hidden;
+  text-overflow:ellipsis;
   padding-bottom: 50px;
 }
 .aboutme{
@@ -75,8 +186,8 @@ h2{
 }
 .resumephoto{
   grid-area: photo;
- background-color: var(--pink-color);
-  margin: 0px 30%;
+  background-color: var(--color_pink);
+  margin: 5px 65px;
   margin-bottom: 66px;
   position: relative;
 }
@@ -99,4 +210,86 @@ h2{
 }
 .exhibition{
   grid-area: exhibition;
+}
+/*---------------------coming soon--------------*/
+#link_portfolio_bottom{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+#link_portfolio_bottom div{
+
+}
+#full_page_soon{
+  font-size: 2em;
+  color: var(--color_text_yellow);
+  text-align: center;
+  margin: 150px;
+}
+/*---------------------footer---------------*/
+.footer{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  ---footer_border_radius: 7vw;
+  overflow: hidden;
+}
+.footer_column{
+  position: absolute;
+  bottom:0px;
+  width: 17%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  animation: footer_column_move 3s ease-in-out infinite 0s alternate;
+}
+#footer_column_1{
+  background-color: #EFE7CF;
+  left:0%;
+  top: 0%;
+  height: 50%;
+  border-radius: 0 var(---footer_border_radius);
+  animation-delay: 0s;
+}
+#footer_column_2{
+  background-color: #EEACAF;
+  left:20%;
+  top: 0%;
+  margin-top: 20vh;
+  height: 75%;
+  border-radius: var(---footer_border_radius) 0;
+  animation-delay: 1s;
+}
+#footer_column_3{
+  background-color: #F9D255;
+  left:40%;
+  top: 0%;
+  height: 70%;
+  border-radius: var(---footer_border_radius) 0;
+  animation-delay: 1.6s;
+}
+#footer_column_4{
+  background-color: #5FB987;
+  left:60%;
+  top: 0%;
+  margin-top: 50vh;
+  height: 45%;
+  border-radius: 0 var(---footer_border_radius);
+  animation-delay: 2s;
+}
+#footer_column_5{
+  background-color: #F4A995;
+  left:80%;
+  top: 0%;
+  margin-top: 30vh;
+  height: 50%;
+  border-radius: var(---footer_border_radius) 0;
+  animation-delay: 2.6s;
+}
+/*-----------footer animation---------------*/
+@keyframes footer_column_move{
+  from {top: 0%;}
+  to {top: 5%;}
 }
