@@ -15,8 +15,9 @@ body{
   background-color: var(--color_green);
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
+  font-size: 16px;
   margin: 0px;
-  min-width: 1100px;
+  min-width: 1200px;
   max-width: 1920px;
 
 }
@@ -103,7 +104,7 @@ h2{
   right: 0px;
 }
 .position_field{
-  color: var(--color_text_yellow);
+  color: var(--color_yellow);
   position: absolute;
   top: calc(60vh + 20px);
   right: 0;
@@ -123,7 +124,7 @@ h2{
   height: 5em;
   line-height: 5em;
   text-align: center;
-  border: 5px solid var(--color_yellow);
+  border: 0.4rem solid var(--color_yellow);
   border-radius: 100px 0px;
   display: block;
   color: var(--color_yellow);
@@ -138,8 +139,8 @@ h2{
 }
 .welcome_screen .link_portfolio{
   position: absolute;
-  bottom: 1em;
-  left: 2em;
+  bottom: 2rem;
+  left: 3rem;
 }
 #rect_1{
   position: absolute;
@@ -148,21 +149,20 @@ h2{
 }
 .decoration_middle{
   background: var(--color_pink);
-  width:7em;
+  width:10em;
   height: 17em;
   position: absolute;
   bottom: 4em;
-  left: 0;
-  border-top-right-radius: 10em;
+  left: -5em;
+  border-top-right-radius: 7em;
 }
   /*----------------------RESUME-------------------------*/
 
 .resume{
-  margin: 20px 5px;
-  padding-top: 50px;
+  margin: 6rem 0.5rem;
   color: var(--color_text_yellow);
   display:grid;
-  grid-template-columns: minmax(400px,4fr) 1fr minmax(400px,4fr);
+  grid-template-columns: minmax(400px,4fr) 1.2fr minmax(400px,4fr);
   grid-template-rows: auto;
   grid-template-areas:
    "aboutme photo education"
@@ -183,7 +183,7 @@ h2{
   white-space: nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  padding-bottom: 50px;
+  padding-bottom: 3rem;
 }
 .aboutme{
   grid-area: aboutme;
@@ -198,10 +198,11 @@ h2{
 .resumephoto{
   grid-area: photo;
   background-color: var(--color_pink);
-  width:80%;
+  width:70%;
   max-width: 7em;
   min-width: 4em;
   margin: 5px auto;
+  margin-bottom: 4em;
   position: relative;
 }
 .resumephoto img{
@@ -231,16 +232,16 @@ h2{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 6rem;
 }
 #link_portfolio_bottom div{
 
 }
 #full_page_soon{
   font-size: 2em;
-  color: var(--color_text_yellow);
+  color: var(--color_pink);
   text-align: center;
-  margin: 150px;
+  margin: 15rem 0px;
 }
 /*---------------------footer---------------*/
 .footer{
