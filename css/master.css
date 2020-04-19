@@ -159,7 +159,7 @@ h2{
   /*----------------------RESUME-------------------------*/
 
 .resume{
-  margin: 6rem 0.5rem;
+  margin: 15rem 0.5rem;
   color: var(--color_text_yellow);
   display:grid;
   grid-template-columns: minmax(400px,4fr) 1.2fr minmax(400px,4fr);
