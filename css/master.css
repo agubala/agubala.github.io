@@ -8,12 +8,15 @@
   --top_right_deco_radius: calc(30*(0.5vh+0.5vw)); /*for small_rect_size calculation*/
   --small_rect_size: calc(var(--top_right_deco_radius)*0.2929); /*a=R(1-sqrt(2)/2)*/
 }
+html{
+scroll-behavior: smooth;
+}
 body{
-  min-width: 1300px;
   background-color: var(--color_green);
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   margin: 0px;
+
 }
 p, h1, h2, h3{
   margin-top: 0px;
@@ -26,7 +29,7 @@ b{
 h1{
   font-weight: 700;
   font-size: 3em;
-    text-height: 2;
+  text-height: 2;
 }
 h2{
   font-weight: 700;
@@ -49,7 +52,7 @@ h2{
   margin: 0px;
   padding: 0px;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 2rem;
   text-decoration: none;
   display: inline;
   line-height: 100%;
@@ -61,14 +64,16 @@ h2{
   top: 0;
   right: 0;
   width: 60%;
+  min-width: 50em;
   height: 60%;
   /*------*text properties*----*/
   color: var(--color_green);
 }
-.name_field p{
+.name_field a{
   position: absolute;
   bottom: 20px;
   left: 20px;
+  color: var(--color_green);
 }
 .top_right_deco{
 
@@ -100,63 +105,68 @@ h2{
   position: absolute;
   top: calc(60vh + 20px);
   right: 0;
-  width:50%;
+  width: 60%;
+  min-width: 50em;
+  /*min-width: 55em;*/
   display: inline-block;
 }
 .position_field .rect{
  display: inline-block;
- margin-right: 5px;
+ margin-right: 0.5em;
+ margin-left: 8em;
 }
 .link_portfolio{
   display: block;
   width:450px;
-  height: 170px;
-  line-height: 170px;
+  height: 5em;
+  line-height: 5em;
   text-align: center;
-  border: 5px solid var(--color_pink);
+  border: 5px solid var(--color_yellow);
   border-radius: 100px 0px;
   display: block;
-  color: var(--color_pink);
-  transition: background-color 0.5s,box-shadow 1.5s;
+  color: var(--color_yellow);
+  transition: background-color 0.3s,box-shadow 0.7s;
 
 }
 .link_portfolio:hover {
   color: var(--color_green);
-  background-color: var(--color_pink);
+  background-color: var(--color_yellow);
   box-shadow: 10px 10px #003536;
 
 }
 .welcome_screen .link_portfolio{
   position: absolute;
-  bottom: 75px;
-  left: 100px;
+  bottom: 1em;
+  left: 2em;
 }
 #rect_1{
   position: absolute;
-  top: min(300px, 40%);
-  left: min(200px, 20%);
+  top: min(19em, 40%);
+  left: min(12.5em, 20%);
 }
 .decoration_middle{
-  background: var(--color_yellow);
-  width:135px;
-  height: 300px;
+  background: var(--color_pink);
+  width:7em;
+  height: 17em;
   position: absolute;
-  bottom: 120px;
+  bottom: 4em;
   left: 0;
-  border-top-right-radius: 150px;
+  border-top-right-radius: 10em;
 }
   /*----------------------RESUME-------------------------*/
 
 .resume{
-  margin: 70px;
+  margin: 20px 5px;
+  padding-top: 50px;
   color: var(--color_text_yellow);
   display:grid;
-  min-width: 1050px;
-  grid-template-columns: minmax(400px,4fr) 240px minmax(400px,4fr);
+  min-width: 1150px;
+  grid-template-columns: minmax(400px,4fr) 1fr minmax(400px,4fr);
   grid-template-rows: auto;
   grid-template-areas:
    "aboutme photo education"
    "experience photo exhibition";
+     scroll-behavior: smooth;
 }
 .resume a{
   color:inherit;
@@ -187,8 +197,10 @@ h2{
 .resumephoto{
   grid-area: photo;
   background-color: var(--color_pink);
-  margin: 5px 65px;
-  margin-bottom: 66px;
+  width:70%;
+  max-width: 7em;
+  min-width: 4em;
+  margin: 5px auto;
   position: relative;
 }
 .resumephoto img{
@@ -283,8 +295,8 @@ h2{
   background-color: #F4A995;
   left:80%;
   top: 0%;
-  margin-top: 30vh;
-  height: 50%;
+  margin-top: 20vh;
+  height: 60%;
   border-radius: var(---footer_border_radius) 0;
   animation-delay: 2.6s;
 }
