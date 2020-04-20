@@ -26,6 +26,10 @@ p, h1, h2, h3{
   vertical-align: top;
   line-height: 120%;
 }
+::selection{
+  background-color: var(--color_pink);
+  color: #EFE7CF;
+}
 b{
   font-weight: 700;
 }
