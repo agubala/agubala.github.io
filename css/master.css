@@ -5,7 +5,7 @@
   --color_text_yellow: #f5c86b ;
   --color_yellow: #ffd957;
   --color_pink: #efadb0;
-  --top_right_deco_radius: calc(30*(0.5vh+0.5vw)); /*for small_rect_size calculation*/
+  --top_right_deco_radius: 15vh;/*calc(30*(0.5vh+0.5vw)); for small_rect_size calculation*/
   --small_rect_size: calc(var(--top_right_deco_radius)*0.2929); /*a=R(1-sqrt(2)/2)*/
 }
 html{
@@ -67,7 +67,8 @@ h2{
 }
 .name_field{
   background-color: var(--color_pink);
-  border-radius: calc(60*(0.5vh+0.5vw)) 0px;
+  border-radius: 30vh 0px;
+  /*border-radius: calc(60*(0.5vh+0.5vw)) vh;*/
   position: absolute;
   top: 0;
   right: 0;
@@ -149,7 +150,9 @@ h2{
 }
 #rect_1{
   position: absolute;
+  top: 40%;
   top: min(19em, 40%);
+  left: 20%;
   left: min(12.5em, 20%);
 }
 .decoration_middle{
